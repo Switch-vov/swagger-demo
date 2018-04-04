@@ -1,0 +1,36 @@
+server:
+  port: 8801
+spring:
+  profiles:
+    active: local # 默认使用local环境
+  http:
+    encoding:
+      force: true
+      enabled: true
+      charset: UTF-8
+  jpa:
+    show-sql: true # 是否打印sql语句
+    hibernate:
+      ddl-auto: none # 是否自动生成DDL
+
+logging:
+  level:
+    root: INFO
+
+---
+##########################################################
+###################    local环境的profile   ##############
+##########################################################
+spring:
+  profiles: local
+  datasource:
+    platform: h2 # 使用H2数据库
+    schema: classpath:schema.sql # 数据库schema文件位置，DDL
+    data: classpath:data.sql # 数据库数据定义，DML
+
+logging:
+  level:
+    root: DEBUG
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
