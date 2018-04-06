@@ -17,5 +17,11 @@ public interface UserService {
      */
     User getById(Integer id);
 
+    /**
+     * 创建用户
+     *
+     * @param user 用户对象
+     * @return 保存后的用户对象
+     */
     User createUser(User user);
 }

@@ -10,6 +10,9 @@ import static com.switchvov.swagger.demo.common.ResponseResult.ResponseParam.bui
  * @date 2018-04-04
  */
 public enum ResponseCode {
+    /**
+     * 成功
+     */
     SUCCESS(buildParam(0, "成功"));
 
     public final ResponseParam PARAM;

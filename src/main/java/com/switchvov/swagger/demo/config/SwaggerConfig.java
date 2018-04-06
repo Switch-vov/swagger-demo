@@ -15,6 +15,12 @@ import java.util.List;
 
 import static com.google.common.collect.Lists.newArrayList;
 
+/**
+ * Swagger配置类
+ *
+ * @author Switch
+ * @date 2018-04-04
+ */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
